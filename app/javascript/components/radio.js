@@ -58,6 +58,37 @@ const radioInterractive = () => {
       });
     });
   };
+
+  const sleep = () => {
+    const switchButton = document.querySelector('.fa-power-off');
+    const sleepMode = document.querySelector('.sleep');
+    switchButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      resetDisplay();
+      resetFooter();
+      if (sleepMode.classList.contains('sleep')) {
+        sleepMode.classList.remove("sleep");
+        radioList.classList.add("radio-list");
+        radioList.classList.remove("hide");
+      } else {
+        sleepMode.classList.add("sleep");
+        radioList.classList.remove("radio-list");
+        radioList.classList.add("hide");
+      }
+    });
+  };
+
+  const back = () => {
+    const backButton = document.querySelector('.fa-chevron-left');
+    backButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      resetDisplay();
+      resetFooter();
+    });
+  };
+
+  sleep();
+  back();
 }
 
 export { radioInterractive };
