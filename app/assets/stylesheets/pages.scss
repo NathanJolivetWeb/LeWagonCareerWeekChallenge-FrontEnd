@@ -10,7 +10,7 @@ body {
   border-radius: 15px;
   width: 300px;
   overflow: hidden;
-  margin: 5% auto;
+  margin: 10% auto;
 }
 .radio-component-header {
   display: flex;
@@ -51,10 +51,21 @@ i {
   padding: 10px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: #4b8cf4;
 }
 .radio-footer h2 {
   font-size: 0.6em;
+}
+.currently-playing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0;
+    color: white;
+  }
 }
 .image-display {
   display: none;
